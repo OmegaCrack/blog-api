@@ -15,7 +15,7 @@ return new class extends Migration
             $table->text('bio');
             $table->string('avatar')->nullable();
             $table->string('website')->nullable();
-            $table->num('role', ['admin', 'editor', 'author'])->default('author');
+            $table->enum('role', ['admin', 'editor', 'author'])->default('author');
         });
     }
 
